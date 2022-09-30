@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "eslint": "^8.24.0",
     "husky": "^8.0.1",
-    "jest": "^29.1.1"
+    "jest": "^29.1.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
   },
   "name": "testingjs",
   "version": "1.0.0",
@@ -195,6 +198,12 @@
     "yargs": "^17.5.1",
     "yargs-parser": "^21.1.1",
     "yocto-queue": "^0.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
   },
   "scripts": {
     "test": "jest",
