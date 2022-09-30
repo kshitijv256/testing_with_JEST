@@ -1,7 +1,9 @@
 const todoList = () => {
+  // defined constants
   const formattedDate = (d) => {
     return d.toISOString().split("T")[0];
   };
+
   var dateToday = new Date();
   const today = formattedDate(dateToday);
   const yesterday = formattedDate(
@@ -11,6 +13,7 @@ const todoList = () => {
     new Date(new Date().setDate(dateToday.getDate() + 1))
   );
 
+  // todo methods
   let all = [];
   const add = (todoItem) => {
     all.push(todoItem);
