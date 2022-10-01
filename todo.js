@@ -2,7 +2,7 @@ const todoList = () => {
   const formattedDate = (d) => {
     return d.toISOString().split("T")[0];
   };
-  var dateToday = new Date();
+  const dateToday = new Date();
   const today = formattedDate(dateToday);
   const yesterday = formattedDate(
     new Date(new Date().setDate(dateToday.getDate() - 1))
@@ -37,6 +37,7 @@ const todoList = () => {
     });
   };
 
+  // eslint-disable-next-line no-unused-vars
   const toDisplayableList = (list) => {
     let mylist = [];
     list.forEach((item) => {
@@ -64,7 +65,6 @@ const todoList = () => {
     overdue,
     dueToday,
     dueLater,
-    toDisplayableList,
   };
 };
 
